@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Shop</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #f5f5f5;
+      }
+
+      header {
+        background: #222;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      .cart {
+        background: #ff6b6b;
+        padding: 6px 12px;
+        border-radius: 20px;
+      }
+
+      .container {
+        max-width: 1200px;
+        margin: auto;
+        padding: 30px;
+      }
+
+      .products {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+
+      .card {
+        background: white;
+        border-radius: 10px;
+        padding: 15px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        text-align: center;
+      }
+
+      .card img {
+        width: 100%;
+        border-radius: 8px;
+      }
+
+      .price {
+        font-size: 18px;
+        font-weight: bold;
+        margin: 10px 0;
+      }
+
+      button {
+        background: #4caf50;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background: #3e8e41;
+      }
+
+      footer {
+        text-align: center;
+        padding: 20px;
+        color: #666;
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <h2>My Simple Shop</h2>
+      <div class="cart">Cart: <span id="cartCount">0</span></div>
+    </header>
+
+    <div class="container">
+      <div class="products">
+        <div class="card">
+          <img src="https://picsum.photos/300/200?1" />
+          <h3>Headphones</h3>
+          <div class="price">$49</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200?2" />
+          <h3>Smart Watch</h3>
+          <div class="price">$99</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200?3" />
+          <h3>Wireless Mouse</h3>
+          <div class="price">$25</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200?4" />
+          <h3>Keyboard</h3>
+          <div class="price">$59</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img src="https://picsum.photos/300/200?5" />
+          <h3>Gaming Chair</h3>
+          <div class="price">$199</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+
+        <div class="card">
+          <img
+            src="https://api.silverlunah.com/images/27288f4d-82df-45f5-a022-e42b3713f3c9.png"
+          />
+          <h3>USB Microphone</h3>
+          <div class="price">$79</div>
+          <button onclick="addToCart()">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
+    <footer>© 2026 My Shop</footer>
+
+    <script>
+      let cart = 0;
+
+      function addToCart() {
+        cart++;
+        document.getElementById("cartCount").innerText = cart;
+      }
+    </script>
+  </body>
+</html>
