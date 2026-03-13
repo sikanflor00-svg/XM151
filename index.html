@@ -48,7 +48,9 @@
       }
 
       .card img {
-        width: 100%;
+        width: 200px;
+        height: 150px;
+        object-fit: cover;
         border-radius: 8px;
       }
 
@@ -76,38 +78,78 @@
         padding: 20px;
         color: #666;
       }
+      #cartCount {
+        background-color: red;
+        color: white;
+        border-radius: 100px;
+        width: 20px;
+        text-align: center;
+        padding: 2px;
+        margin-top: -10px;
+        margin-left: 20px;
+        position: absolute;
+      }
+      #cartIcon {
+        width: 30px;
+      }
+      #cart {
+        margin-right: 100px;
+      }
+      #header {
+        background: #222;
+        width: 100%;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #companyLogo {
+        width: 50px;
+      }
+      #companyName {
+        margin-left: -1450px;
+      }
     </style>
   </head>
   <body>
-    <header>
-      <h2>My Simple Shop</h2>
-      <div class="cart">Cart: <span id="cartCount">0</span></div>
-    </header>
-
+    <div id="header">
+      <a href="index.html">
+        <img id="companyLogo" src="images/company-logo.jpg" />
+      </a>
+      <h5 id="companyName">My company</h5>
+      <a href="cart.html">
+        <div id="cart">
+          <div id="cartCount">0</div>
+          <img id="cartIcon" src="images/cart.png" />
+        </div>
+      </a>
+    </div>
     <div class="container">
       <div class="products">
-        <div class="card"> 
-        <a href="hpspec.html">  
-          <img src="https://picsum.photos/300/200?1" />
-          <h3>Headphones</h3>
-        </a>
+        <div class="card">
+          <a href="products/posa.html">
+            <img src="images/posa.jpg" />
+            <h3>Posa</h3>
+          </a>
           <div class="price">$49</div>
           <button onclick="addToCart()">Add to Cart</button>
         </div>
 
         <div class="card">
-          
-          <a href="golayspec.html">
+          <a href="products/master-posa.html">
             <img src="https://picsum.photos/300/200?2" />
-          <h3>Smart Watch</h3>
+            <h3>Smart Watch</h3>
           </a>
           <div class="price">$99</div>
           <button onclick="addToCart()">Add to Cart</button>
         </div>
 
         <div class="card">
-          <img src="https://picsum.photos/300/200?3" />
-          <h3>Wireless Mouse</h3>
+          <a href="products/wireless-mouse.html">
+            <img src="images/wireless-mouse.jpg" />
+            <h3>Wireless Mouse</h3>
+          </a>
           <div class="price">$25</div>
           <button onclick="addToCart()">Add to Cart</button>
         </div>
