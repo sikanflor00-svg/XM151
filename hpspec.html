@@ -29,5 +29,18 @@
         <h1>Posa</h1>
         <p>Posa KungFu Killer</p>
         <button onclick="addToCart()">Add to Cart</button>
+        <div id="cartCount">0</div>
+        <script>
+            let cart = 0;
+
+            function addToCart() { 
+                if (cart>=10){
+                    cart=0;
+                    return;
+                }
+                cart=cart+2;
+                document.getElementById("cartCount").innerText = cart;
+            }
+        </script>
     </body>
 </html>
