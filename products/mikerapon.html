@@ -39,13 +39,52 @@
             margin-right: 100px;
         }
         #header {
-            background: #525151;
-            width: 100%;
-            color: white;
-            padding: 15px 30px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
+          background: #525151;
+          width: 100%;
+          color: white;
+          padding: 15px 30px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
+        #companyLogo {
+          width: 50px;
+
+        }
+
+        #content {
+          padding: 30px;
         }
        </style>
     </head>
+    <body>
+      <div id="header">
+        <a href="../index.html">
+          <img id="companyLogo" src="../images/company-logo.jpg" />
+        </a>
+        <h5 id="companyName">My company</h5>
+        <a href="../cart.html">
+          <div id="cart">
+            <div id="cartCount">0</div>
+            <img id="cartIcon" src="../images/cart.png" />
+          </div>
+        </a>
+        <div id="content">
+           <img src="../images/Yap5000.webp" />
+           <h1>USB Microphone</h1>
+           <p>Talk with the Ultimate Yap Master5000 Superb Quality Mic</p>
+           <button onclick="addToCart()">Add to Cart</button>
+        </div>
+        <script>
+          let cart = 0;
+
+          function addToCart() {
+            if (cart == 10) {
+
+            }
+            cart = cart + 2;
+            document.getElementById("cartCount").innerText = cart;
+          }
+        </script>
+    </body>
+</html>    
