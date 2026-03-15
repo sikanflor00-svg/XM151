@@ -107,11 +107,17 @@
       #companyLogo {
         width: 50px;
       }
-      .container {
-        max-width: 1200px;
-        margin: auto;
-        padding: 30px;
-        background-color: aliceblue;
+      #loginForm {
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+      }
+      #companyName {
+        margin-left: 10px;
+      }
+      #loginButton {
+        margin-left: 10px;
+        margin-top: -7px;
       }
     </style>
   </head>
@@ -121,6 +127,19 @@
         <img id="companyLogo" src="images/company-logo.jpg" />
       </a>
       <h5 id="companyName">My company</h5>
+
+      <form id="loginForm">
+        <div id="loginForm">
+          <label for="username">Username:</label>
+          <input type="text" id="username" name="username" />
+        </div>
+        <div id="passwordForm">
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" />
+        </div>
+        <button id="loginButton" onclick="login()">Login</button>
+      </form>
+
       <a href="cart.html">
         <div id="cart">
           <div id="cartCount">0</div>
@@ -128,16 +147,7 @@
         </div>
       </a>
     </div>
-    <div class="container">
-      <h1>Login</h1>
-      <form>
-        <label for="username">Username:</label><br />
-        <input type="text" id="username" name="username" /><br /><br />
-        <label for="password">Password:</label><br />
-        <input type="password" id="password" name="password" /><br /><br />
-        <button onclick="login()">Login</button>
-      </form>
-    </div>
+    <div class="container"></div>
 
     <footer>© 2026 My Shop</footer>
 
@@ -157,7 +167,7 @@
         const validPassword = "pass";
 
         if (username == validUsername && password == validPassword) {
-          window.location.href = "index.html";
+          window.open("index.html");
         } else {
           alert("Invalid username or password. asdkljaskljdklj");
         }
