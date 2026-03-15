@@ -119,6 +119,9 @@
         margin-left: 10px;
         margin-top: -7px;
       }
+      #loginButton.hover {
+        background: #3e8e41;
+      }
     </style>
   </head>
   <body>
@@ -127,7 +130,6 @@
         <img id="companyLogo" src="images/company-logo.jpg" />
       </a>
       <h5 id="companyName">My company</h5>
-
       <form id="loginForm">
         <div id="loginForm">
           <label for="username">Username:</label>
@@ -139,7 +141,6 @@
         </div>
         <button id="loginButton" onclick="login()">Login</button>
       </form>
-
       <a href="cart.html">
         <div id="cart">
           <div id="cartCount">0</div>
@@ -152,24 +153,19 @@
     <footer>© 2026 My Shop</footer>
 
     <script>
-      let cart = 0;
-
-      function addToCart() {
-        cart++;
-        document.getElementById("cartCount").innerText = cart;
-      }
-
       function login() {
+        // Variables
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
         const validUsername = "user";
         const validPassword = "pass";
 
+        // Actual login logic
         if (username == validUsername && password == validPassword) {
           window.open("index.html");
         } else {
-          alert("Invalid username or password. asdkljaskljdklj");
+          alert("Invalid username or password.");
         }
       }
     </script>
