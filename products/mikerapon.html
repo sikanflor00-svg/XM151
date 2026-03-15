@@ -1,90 +1,93 @@
 <html>
-    <head>
-       <title>Product Specifications</title>
-       <style>
-        body {
-          font-family: Arial, sans-serif;
-          background-color: aliceblue;
-          margin: 0;
-        }
-        h1 {
-          color: black;  
-        }
-        p {
-          color: grey;  
-        }
-        button {
-          background: #4caf50;
-          border: none;
-          padding: 10px 15px;
-          color: white;
-          border-radius: 5px;
-          cursor: pointer;  
-        }
-        #cartCount {
-           background-color: red;
-           color: white;
-           border-radius: 100px;
-           width: 20px;
-           text-align: center;
-           padding: 2px;
-           margin-top: -10px;
-           margin-left: 20px;
-           position: absolute;
-        }
-        #cartIcon {
-            width: 30px;
-        }
-        #cart {
-            margin-right: 100px;
-        }
-        #header {
-          background: #525151;
-          width: 100%;
-          color: white;
-          padding: 15px 30px;
-          display: flex;
-          justify-content: space-between;
-          align-items: center;
-        }
-        #companyLogo {
-          width: 50px;
+  <head>
+    <title>Product Specifications</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        background-color: aliceblue;
+        margin: 0;
+      }
+      h1 {
+        color: black;
+      }
+      p {
+        color: grey;
+      }
+      button {
+        background: #4caf50;
+        border: none;
+        padding: 10px 15px;
+        color: white;
+        border-radius: 5px;
+        cursor: pointer;
+      }
+      #cartCount {
+        background-color: red;
+        color: white;
+        border-radius: 100px;
+        width: 20px;
+        text-align: center;
+        padding: 2px;
+        margin-top: -10px;
+        margin-left: 20px;
+        position: absolute;
+      }
+      #cartIcon {
+        width: 30px;
+      }
+      #cart {
+        margin-right: 100px;
+      }
+      #header {
+        background: #525151;
+        width: 100%;
+        color: white;
+        padding: 15px 30px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      #companyLogo {
+        width: 50px;
+      }
 
-        }
+      #content {
+        padding: 30px;
+      }
 
-        #content {
-          padding: 30px;
-        }
-       </style>
-    </head>
-    <body>
-      <div id="header">
-        <a href="../index.html">
-          <img id="companyLogo" src="../images/company-logo.jpg" />
-        </a>
-        <h5 id="companyName">My company</h5>
-        <a href="../cart.html">
-          <div id="cart">
-            <div id="cartCount">0</div>
-            <img id="cartIcon" src="../images/cart.png" />
-          </div>
-        </a>
-        <div id="content">
-           <img src="../images/Yap5000.webp" />
-           <h1>USB Microphone</h1>
-           <p>Talk with the Ultimate Yap Master5000 Superb Quality Mic</p>
-           <button onclick="addToCart()">Add to Cart</button>
+      #product-image {
+        height: 450;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="header">
+      <a href="../index.html">
+        <img id="companyLogo" src="../images/company-logo.jpg" />
+      </a>
+      <h5 id="companyName">My company</h5>
+      <a href="../cart.html">
+        <div id="cart">
+          <div id="cartCount">0</div>
+          <img id="cartIcon" src="../images/cart.png" />
         </div>
-        <script>
-          let cart = 0;
+      </a>
+    </div>
+    <div id="content">
+      <img id="product-image" src="../images/Yap5000.webp" />
+      <h1>USB Microphone</h1>
+      <p>Talk with the Ultimate Yap Master5000 Superb Quality Mic</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+    <script>
+      let cart = 0;
 
-          function addToCart() {
-            if (cart == 10) {
-
-            }
-            cart = cart + 2;
-            document.getElementById("cartCount").innerText = cart;
-          }
-        </script>
-    </body>
-</html>    
+      function addToCart() {
+        if (cart == 10) {
+        }
+        cart = cart + 2;
+        document.getElementById("cartCount").innerText = cart;
+      }
+    </script>
+  </body>
+</html>
