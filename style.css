@@ -91,6 +91,11 @@ footer {
   position: absolute;
 }
 
+.auth-icon {
+  width: 20px;
+  margin-right: 10px;
+}
+
 #cartIcon {
   width: 30px;
 }
@@ -101,7 +106,6 @@ footer {
 
 #header {
   background: #525151;
-  width: 100%;
   color: white;
   padding: 15px 30px;
   display: flex;
@@ -109,27 +113,31 @@ footer {
   align-items: center;
 }
 
-#companyLogo {
+#company-logo {
   width: 50px;
 }
 
-#loginForm {
+#login-form {
   display: flex;
   flex-direction: row;
   align-items: flex-start;
 }
 
-#companyName {
+#password-input {
+  margin-top: 5px;
+}
+
+#password-input {
   margin-left: 10px;
 }
 
-#loginButton {
+#company-name {
   margin-left: 10px;
-  margin-top: -7px;
 }
 
-#loginButton.hover {
-  background: #3e8e41;
+#login-button {
+  margin-left: 15px;
+  margin-top: -2px;
 }
 
 #product-image {
