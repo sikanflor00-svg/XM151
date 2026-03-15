@@ -1,60 +1,7 @@
 <html>
   <head>
     <title>Product Specifications</title>
-    <style>
-      body {
-        font-family: Arial, sans-serif;
-        background-color: aliceblue;
-        margin: 0;
-      }
-      h1 {
-        color: black;
-      }
-      p {
-        color: grey;
-      }
-      button {
-        background: #4caf50;
-        border: none;
-        padding: 10px 15px;
-        color: white;
-        border-radius: 5px;
-        cursor: pointer;
-      }
-      #cartCount {
-        background-color: red;
-        color: white;
-        border-radius: 100px;
-        width: 20px;
-        text-align: center;
-        padding: 2px;
-        margin-top: -10px;
-        margin-left: 20px;
-        position: absolute;
-      }
-      #cartIcon {
-        width: 30px;
-      }
-      #cart {
-        margin-right: 100px;
-      }
-      #header {
-        background: #525151;
-        width: 100%;
-        color: white;
-        padding: 15px 30px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-      }
-      #companyLogo {
-        width: 50px;
-      }
-     
-      #content {
-        padding: 30px;
-      }
-    </style>
+    <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
     <div id="header">
@@ -71,7 +18,7 @@
     </div>
 
     <div id="content">
-      <img src="../images/wireless-mouse.jpg" />
+      <img id="product-image" src="../images/wireless-mouse.jpg" />
       <h1>Wireless Mouse</h1>
       <p>This is a wireless mouse</p>
       <button onclick="addToCart()">Add to Cart</button>
