@@ -20,4 +20,23 @@
         <video src="Video/NiggDelight.mp4" controls autoplay>
         <source src="Video/NiggDelight.mp4" typ="video/webm">
         </video> 
-        <h3>A Niggie Delight The Nigg Nigg Nigg Wont Stop</h3>      
+        <h3>A Niggie Delight The Nigg Nigg Nigg Wont Stop</h3>
+        <p>
+          A Nigg Nigg Niggie Nigg Nigger<br />
+        </p>
+        <button onclick="addToCart()">Add to Cart</button>
+      </div>
+      <script>
+        let cart = 0;
+        
+        function addToCart() {
+          if (cart == 10) {
+            return;
+          }
+          cart = cart + 2;
+          document.getElementById("cartCount").innerText = cart;
+        }
+      </script>
+    </body>
+  </head>
+</html>            
