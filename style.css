@@ -108,6 +108,12 @@ footer {
   margin-right: 100px;
 }
 
+#menu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
 #header {
   background: #525151;
   color: white;
@@ -153,4 +159,43 @@ footer {
 #product-video {
   margin: 10px 0 10px 0;
   width: 100%;
+}
+
+#menu-item-1 {
+  margin-left: 400px;
+}
+
+/* TODO: CSS reference */
+#menu-btn {
+  margin-right: 10px;
+  white-space: nowrap;
+  background-color: #333;
+  color: white;
+  border: none;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+#menu-btn:hover {
+  color: #ddd;
+}
+
+#dropdown {
+  margin-top: 5px;
+  display: none;
+  position: absolute;
+  background-color: #444;
+  min-width: 120px;
+  border-radius: 5px;
+}
+
+#dropdown a {
+  display: block;
+  padding: 10px;
+  color: white;
+  text-decoration: none;
+}
+
+#dropdown a:hover {
+  background-color: #555;
 }

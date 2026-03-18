@@ -12,12 +12,23 @@
         <img id="SKYNET" src="images/SKYNET.gif" />
       </a>
       <h5 id="SKYNET">SKYNET</h5>
-      <a href="cart.html">
-        <div id="cart">
-          <div id="cartCount">0</div>
-          <img id="cartIcon" src="images/cart.png" />
+
+      <div id="menu">
+        // TODO: Copy to other pages' header
+        <div id="menu-item-1">
+          <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
+          <div id="dropdown">
+            <a href="index.html">Home</a>
+            <a href="login.html">Logout</a>
+          </div>
         </div>
-      </a>
+        <div id="menu-item-2">
+          <a id="cart" href="cart.html">
+            <div id="cartCount">0</div>
+            <img id="cartIcon" src="images/cart.png" />
+          </a>
+        </div>
+      </div>
     </div>
     <div class="container">
       <div class="products">
@@ -85,6 +96,22 @@
       function addToCart() {
         cart++;
         document.getElementById("cartCount").innerText = cart;
+      }
+
+      // TODO: Javascript reference
+      function toggleMenu() {
+        // dropdown element <div id="dropdown">
+        const dropdown = document.getElementById("dropdown");
+        const menuBtn = document.getElementById("menu-btn");
+
+        // If the dropdown is visible, hide it. Otherwise, show it.
+        if (dropdown.style.display == "block") {
+          dropdown.style.display = "none";
+          menuBtn.innerHTML = "Menu ▾ ";
+        } else {
+          dropdown.style.display = "block";
+          menuBtn.innerHTML = "Menu ▴";
+        }
       }
     </script>
   </body>
