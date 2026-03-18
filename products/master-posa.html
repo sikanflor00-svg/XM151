@@ -1,34 +1,37 @@
 <html>
-   <head>
+  <head>
     <title>Niggie Delight</title>
-    <link rel="stylesheet" href="../style.css"/>
+    <link rel="stylesheet" href="../style.css" />
 
     <body>
       <div id="header">
-         <a href="../cart.html">
-           <img id="SKYNET" src="../images/SKYNET.gif" />
-          </a>
-          <h5 id="Niggie Delight" >Niggie Delight</h5>
-          <a href="../cart.html">
-             <div id="cart">
-               <div id="cartCount">0</div>
-               <img id="cartIcon" src="../images/cart.png">
-             </div>
-          </a>
+        <a href="../index.html">
+          <img id="SKYNET" src="../images/SKYNET.gif" />
+        </a>
+        <h5 id="Niggie Delight">Niggie Delight</h5>
+        <a href="../cart.html">
+          <div id="cart">
+            <div id="cartCount">0</div>
+            <img id="cartIcon" src="../images/cart.png" />
+          </div>
+        </a>
       </div>
       <div id="content">
-        <video src="Video/NiggDelight.mp4" controls autoplay>
-        <source src="Video/NiggDelight.mp4" typ="video/webm">
-        </video> 
+        <video
+          id="product-video"
+          src="../video/NiggDelight.mp4"
+          controls
+          autoplay
+        >
+          <source src="../video/NiggDelight.mp4" type="video/mp4" />
+        </video>
         <h3>A Niggie Delight The Nigg Nigg Nigg Wont Stop</h3>
-        <p>
-          A Nigg Nigg Niggie Nigg Nigger<br />
-        </p>
+        <p>A Nigg Nigg Niggie Nigg Nigger<br /></p>
         <button onclick="addToCart()">Add to Cart</button>
       </div>
       <script>
         let cart = 0;
-        
+
         function addToCart() {
           if (cart == 10) {
             return;
@@ -39,4 +42,4 @@
       </script>
     </body>
   </head>
-</html>            
+</html>
