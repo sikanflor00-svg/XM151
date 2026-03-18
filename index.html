@@ -11,13 +11,13 @@
       <a href="index.html">
         <img id="SKYNET" src="images/SKYNET.gif" />
       </a>
-      <h5 id="SKYNET">SKYNET</h5>
+      <h5>SKYNET</h5>
 
       <div id="menu">
-        // TODO: Copy to other pages' header
+        <!-- TODO: Copy to other pages' header -->
         <div id="menu-item-1">
           <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
-          <div id="dropdown">
+          <div id="dropdown" style="display: none">
             <a href="index.html">Home</a>
             <a href="login.html">Logout</a>
           </div>
@@ -30,6 +30,7 @@
         </div>
       </div>
     </div>
+
     <div class="container">
       <div class="products">
         <div class="card">
@@ -98,16 +99,13 @@
         document.getElementById("cartCount").innerText = cart;
       }
 
-      // TODO: Javascript reference
       function toggleMenu() {
-        // dropdown element <div id="dropdown">
         const dropdown = document.getElementById("dropdown");
         const menuBtn = document.getElementById("menu-btn");
 
-        // If the dropdown is visible, hide it. Otherwise, show it.
-        if (dropdown.style.display == "block") {
+        if (dropdown.style.display === "block") {
           dropdown.style.display = "none";
-          menuBtn.innerHTML = "Menu ▾ ";
+          menuBtn.innerHTML = "Menu ▾";
         } else {
           dropdown.style.display = "block";
           menuBtn.innerHTML = "Menu ▴";
