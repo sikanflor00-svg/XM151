@@ -32,61 +32,7 @@
     </div>
 
     <div class="container">
-      <div class="products">
-        <div class="card">
-          <a href="products/posa.html">
-            <img src="images/posa.jpg" />
-            <h3>Posa</h3>
-          </a>
-          <div class="price">$49</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <a href="products/master-posa.html">
-            <img src="images/incelwojak.gif" />
-            <h3>Niggie Delight</h3>
-          </a>
-          <div class="price">$99</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <a href="products/wireless-mouse.html">
-            <img src="images/RealMouse.webp" />
-            <h3>Wireless Mouse</h3>
-          </a>
-          <div class="price">$25</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <a href="products/SuperKeyboard.html">
-            <img src="images/superkeyboard5000.gif" />
-            <h3>Keyboard</h3>
-          </a>
-          <div class="price">$59</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <a href="products/ultimateGamingChair.html">
-            <img src="images/supergamingchair.gif" />
-            <h3>Gaming Chair</h3>
-          </a>
-          <div class="price">$199</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-
-        <div class="card">
-          <a href="products/mikerapon.html">
-            <img src="images/giphy.gif" />
-            <h3>USB Microphone</h3>
-          </a>
-          <div class="price">$79</div>
-          <button onclick="addToCart()">Add to Cart</button>
-        </div>
-      </div>
+      <div class="products" id="products"></div>
     </div>
 
     <footer>© 2026 My Shop</footer>
@@ -108,9 +54,79 @@
           menuBtn.innerHTML = "Menu ▾";
         } else {
           dropdown.style.display = "block";
-          menuBtn.innerHTML = "Menu ▴";
+          menuBtn.innerHTML = ">Menu ▴";
         }
       }
+
+      function renderProducts() {
+        const products = [
+          {
+            id: 1,
+            name: "Posa",
+            price: 49,
+            image: "images/posa.jpg",
+            link: "products/posa.html",
+          },
+          {
+            id: 2,
+            name: "Niggie Delight",
+            price: 99,
+            image: "images/incelwojak.gif",
+            link: "products/master-posa.html",
+          },
+          {
+            id: 3,
+            name: "Wireless Mouse",
+            price: 25,
+            image: "images/RealMouse.webp",
+            link: "products/wireless-mouse.html",
+          },
+          {
+            id: 4,
+            name: "Keyboard",
+            price: 59,
+            image: "images/superkeyboard5000.gif",
+            link: "products/SuperKeyboard.html",
+          },
+          {
+            id: 5,
+            name: "Gaming Chair",
+            price: 199,
+            image: "images/supergamingchair.gif",
+            link: "products/ultimateGamingChair.html",
+          },
+          {
+            id: 6,
+            name: "USB Microphone",
+            price: 79,
+            image: "images/giphy.gif",
+            link: "products/mikerapon.html",
+          },
+        ];
+
+        const productsContainer = document.getElementById("products");
+
+        for (let i = 0; i < products.length; i++) {
+          const product = products[i];
+
+          const productCard = document.createElement("div");
+
+          productCard.innerHTML = `
+              <div class="card">
+                <a href="${product.link}">
+                  <img src="${product.image}"/>
+                  <h3>${product.name}</h3>
+                </a>
+                <div class="price">$99</div>
+                <button onclick="addToCart()">Add to Cart</button>
+              </div>
+            `;
+
+          productsContainer.appendChild(productCard);
+        }
+      }
+
+      renderProducts();
     </script>
   </body>
 </html>
