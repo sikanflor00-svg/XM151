@@ -31,11 +31,7 @@
     </div>
 
     <div id="content">
-      <img id="product-image" src="../images/Yap5000.webp" />
-      <h3>Deutsch Qualität Mikro</h3>
-      <div class="price">$79.99</div>
-      <p>Überragende Qualität, Erstklassiges Mikrofon in Deutscher Qualität</p>
-      <button onclick="addToCart()">Add to Cart</button>
+
     </div>
 
     <footer>© 2026 My Shop</footer>
@@ -60,6 +56,27 @@
           menuBtn.innerHTML = "Menu ▴";
         }
       }
+      function renderProduct() {
+        const product = {
+          id: 1,
+          name: "Deutsch Qualität Mikro",
+          price: 79.99,
+          image: "../images/Yap5000.webp",
+          description: "Überragende Qualität, Erstklassiges Mikrofon in Deutscher Qualität.",
+        };
+
+        const productElement = document.createElement("div");
+
+        productElement.innerHTML = `
+          <img id="product-image" src="${product.image}" />
+          <h3>${product.name}</h3>
+          <div class="price">$${product.price.toFixed(2)}</div>
+          <p>${product.description}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        `;
+        document.getElementById("content").appendChild(productElement);
+      }
+      renderProduct();
     </script>
   </body>
 </html>
