@@ -6,7 +6,7 @@
 
     <body>
       <div id="header">
-        <a href="index.html">
+        <a href="../index.html">
           <img id="SKYNET" src="../images/SKYNET.gif" />
         </a>
         <h5>SKYNET</h5>
@@ -28,19 +28,7 @@
           </div>
         </div>
       </div>
-      <div id="content">
-        <video
-          id="product-video"
-          src="../video/NiggDelight.mp4"
-          controls
-          autoplay
-        >
-          <source src="../video/NiggDelight.mp4" type="video/mp4" />
-        </video>
-        <h3>A Niggie Delight The Nigg Nigg Nigg Wont Stop</h3>
-        <p>A Nigg Nigg Niggie Nigg Nigger<br /></p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
+      <div id="content"></div>
       <script>
         let cart = 0;
 
@@ -64,6 +52,34 @@
             menuBtn.innerHTML = "Menu ▴";
           }
         }
+
+        function renderProduct() {
+          const product = {
+            id: 1,
+            name: "A Niggie Delight The Nigg Nigg Nigg Wont Stop",
+            price: 49,
+            video: "../video/NiggDelight.mp4",
+            description: "A Nigg Nigg Niggie Nigg Nigger<br />",
+          };
+
+          const productElement = document.createElement("div");
+
+          productElement.innerHTML = `
+            <video
+              id="product-video"
+              src="${product.video}"
+              controls
+              autoplay
+            ></video>
+            <h3>${product.name}</h3>
+            <div class="price">$${product.price.toFixed(2)}</div>
+            <p>${product.description}</p>
+            <button onclick="addToCart()">Add to Cart</button>
+          `;
+          document.getElementById("content").appendChild(productElement);
+        }
+
+        renderProduct();
       </script>
     </body>
   </head>

@@ -38,8 +38,10 @@
     <footer>© 2026 My Shop</footer>
 
     <script>
+      // Variables section
       let cart = 0;
 
+      // Functions section
       function addToCart() {
         cart++;
         document.getElementById("cartCount").innerText = cart;
@@ -52,6 +54,7 @@
         if (dropdown.style.display === "block") {
           dropdown.style.display = "none";
           menuBtn.innerHTML = "Menu ▾";
+          cart + 1;
         } else {
           dropdown.style.display = "block";
           menuBtn.innerHTML = "Menu ▴";
@@ -126,6 +129,7 @@
         }
       }
 
+      // Renderers
       renderProducts();
     </script>
   </body>
