@@ -31,11 +31,7 @@
     </div>
 
     <div id="content">
-      <img id="product-image" src="../images/Ultimate Keyboard.webp" />
-      <h3>Ultimate Keyboard</h3>
-      <div class="price">$59.99</div>
-      <p>GitGud Sir.</p>
-      <button onclick="addToCart()">Add to Cart</button>
+      
     </div>
 
     <footer>© 2026 My Shop</footer>
@@ -46,6 +42,29 @@
       function addToCart() {
         cart++;
         document.getElementById("cartCount").innerText = cart;
+      }
+
+      function renderProduct() {
+        const product = {
+          id: 1,
+          name: "Ultimate Gaming Keyboard",
+          price: 149.99,
+          image: "../images/Ultimate Keyboard.webp",
+          description: "Experience the ultimate gaming performance with our Ultimate Gaming Keyboard, featuring customizable RGB lighting, mechanical switches for precise keystrokes, and a sleek ergonomic design for maximum comfort during long gaming sessions.",
+        };
+
+        const content = document.getElementById("content");
+        const productElement = document.createElement("div");
+        productElement.className = "product-detail";
+        content.appendChild(productElement);
+
+        productElement.innerHTML = `
+          <img id="product-image" src="${product.image}" />
+          <h3>${product.name}</h3>
+          <div class="price">$${product.price.toFixed(2)}</div>
+          <p>${product.description}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        `;
       }
 
       function toggleMenu() {
@@ -60,6 +79,7 @@
           menuBtn.innerHTML = "Menu ▴";
         }
       }
+      renderProduct();
     </script>
   </body>
 </html>

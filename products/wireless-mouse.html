@@ -31,14 +31,7 @@
     </div>
 
     <div id="content">
-      <img src="../images/RealMouse.webp" alt="Wireless Mouse" />
-      <h3>Wireless Mouse</h3>
-      <div class="price">$25</div>
-      <p>
-        High precision wireless mouse with ergonomic design and long battery
-        life.
-      </p>
-      <button onclick="addToCart()">Add to Cart</button>
+      
     </div>
 
     <footer>© 2026 My Shop</footer>
@@ -49,6 +42,28 @@
       function addToCart() {
         cart++;
         document.getElementById("cartCount").innerText = cart;
+      }
+      function renderProduct() {
+        const product = {
+          id: 1,
+          name: "Wireless Mouse",
+          price: 49.99,
+          image: "../images/RealMouse.webp",
+          description: "Experience the freedom of wireless connectivity with our sleek and ergonomic Wireless Mouse, designed for precision and comfort during your everyday tasks.",
+        };
+      
+        const content = document.getElementById("content");
+        const productElement = document.createElement("div");
+        productElement.className = "product-detail";
+        content.appendChild(productElement);
+
+        productElement.innerHTML = `
+          <img id="product-image" src="${product.image}" />
+          <h3>${product.name}</h3>
+          <div class="price">$${product.price.toFixed(2)}</div>
+          <p>${product.description}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        `;
       }
 
       function toggleMenu() {
@@ -63,6 +78,7 @@
           menuBtn.innerHTML = "Menu ▴";
         }
       }
+      renderProduct();
     </script>
   </body>
 </html>

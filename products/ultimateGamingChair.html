@@ -31,14 +31,7 @@
     </div>
 
     <div id="content">
-      <img id="product-image" src="../images/ultimatexperience.webp" />
-      <h3>The Ultimate Experience Gaming Chair</h3>
-      <div class="price">$199</div>
-      <p>
-        Beat The Game With the Ultimate Gaming ChairExperience the Ultimate
-        Comfort Peak Performance
-      </p>
-      <button onclick="addToCart()">Add to Cart</button>
+
     </div>
 
     <footer>© 2026 My Shop</footer>
@@ -50,7 +43,29 @@
         cart++;
         document.getElementById("cartCount").innerText = cart;
       }
+      function renderProduct() {
+        const product = {
+          id: 1,
+          name: "Ultimate Gaming Chair",
+          price: 199.99,
+          image: "../images/ultimatexperience.webp",
+          description: "Beat The Game With the Ultimate Gaming Chair Experience the UltimateComfort Peak Performance.",
+        };
+      
+        const content = document.getElementById("content");
+        const productElement = document.createElement("div");
+        productElement.className = "product-detail";
+        content.appendChild(productElement);
 
+        productElement.innerHTML = `
+          <img id="product-image" src="${product.image}" />
+          <h3>${product.name}</h3>
+          <div class="price">$${product.price.toFixed(2)}</div>
+          <p>${product.description}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        `;
+      }
+        
       function toggleMenu() {
         const dropdown = document.getElementById("dropdown");
         const menuBtn = document.getElementById("menu-btn");
@@ -63,6 +78,7 @@
           menuBtn.innerHTML = "Menu ▴";
         }
       }
+      renderProduct();
     </script>
   </body>
 </html>
