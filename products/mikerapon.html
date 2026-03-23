@@ -16,6 +16,13 @@
         </div>
       </a>
     </div>
+    <div id="menu-item-1">
+          <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
+          <div id="dropdown" style="display: none">
+            <a href="../index.html">Home</a>
+            <a href="../login.html">Logout</a>
+          </div>
+    </div>
     <div id="content">
       <img id="product-image" src="../images/Yap5000.webp" />
       <h1>USB Microphone</h1>
@@ -26,12 +33,10 @@
       let cart = 0;
 
       function addToCart() {
-        if (cart == 10) {
-        }
-        cart = cart + 2;
+        cart += 1;
         document.getElementById("cartCount").innerText = cart;
       }
-       function toggleMenu() {
+       function toggleMenu()  {
         const dropdown = document.getElementById("dropdown");
         const menuBtn = document.getElementById("menu-btn");
 
@@ -40,7 +45,7 @@
           menuBtn.innerHTML = "Menu ▾";
         } else {
           dropdown.style.display = "block";
-          menuBtn.innerHTML = ">Menu ▴";
+          menuBtn.innerHTML = "Menu ▴";
         }
       }
     </script>
