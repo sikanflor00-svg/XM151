@@ -35,6 +35,19 @@
           cart = cart + 2;
           document.getElementById("cartCount").innerText = cart;
         }
+        
+         function toggleMenu() {
+        const dropdown = document.getElementById("dropdown");
+        const menuBtn = document.getElementById("menu-btn");
+
+        if (dropdown.style.display === "block") {
+          dropdown.style.display = "none";
+          menuBtn.innerHTML = "Menu ▾";
+        } else {
+          dropdown.style.display = "block";
+          menuBtn.innerHTML = ">Menu ▴";
+        }
+      }
       </script>
     </body>
   </head>
