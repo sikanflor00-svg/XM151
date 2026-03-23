@@ -1,6 +1,9 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>Product Specifications</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Gaming Keyboard</title>
     <link rel="stylesheet" href="../style.css" />
   </head>
   <body>
@@ -8,32 +11,44 @@
       <a href="../index.html">
         <img id="SKYNET" src="../images/SKYNET.gif" />
       </a>
-      <h5 id="company-name">My company</h5>
-      <a href="../cart.html">
-        <div id="cart">
-          <div id="cartCount">0</div>
-          <img id="cartIcon" src="../images/cart.png" />
+      <h5>SKYNET</h5>
+
+      <div id="menu">
+        <div id="menu-item-1">
+          <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
+          <div id="dropdown" style="display: none">
+            <a href="../index.html">Home</a>
+            <a href="../login.html">Logout</a>
+          </div>
         </div>
-      </a>
+        <div id="menu-item-2">
+          <a id="cart" href="../cart.html">
+            <div id="cartCount">0</div>
+            <img id="cartIcon" src="../images/cart.png" />
+          </a>
+        </div>
+      </div>
     </div>
+
     <div id="content">
       <img id="product-image" src="../images/Ultimate Keyboard.webp" />
-      <h1>Ultimate Keyboard</h1>
-      <p>Behold The Ultimate Keyboard pahirapan nyu sarili nyu</p>
+      <h3>Ultimate Keyboard</h3>
+      <div class="price">$59.99</div>
+      <p>GitGud Sir.</p>
       <button onclick="addToCart()">Add to Cart</button>
     </div>
+
+    <footer>© 2026 My Shop</footer>
+
     <script>
       let cart = 0;
 
       function addToCart() {
-        if (cart == 10) {
-          return;
-        }
-        cart = cart + 2;
+        cart++;
         document.getElementById("cartCount").innerText = cart;
       }
 
-       function toggleMenu() {
+      function toggleMenu() {
         const dropdown = document.getElementById("dropdown");
         const menuBtn = document.getElementById("menu-btn");
 

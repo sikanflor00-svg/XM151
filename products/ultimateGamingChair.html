@@ -1,42 +1,54 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
   <head>
-    <title>GamingChairNiLola</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ultimate Gaming Keyboard</title>
     <link rel="stylesheet" href="../style.css" />
+  </head>
+  <body>
+    <div id="header">
+      <a href="../index.html">
+        <img id="SKYNET" src="../images/SKYNET.gif" />
+      </a>
+      <h5>SKYNET</h5>
 
-    <body>
-      <div id="header">
-        <a href="../cart.html">
-          <img id="SKYNET" src="../images/SKYNET.gif" />
-        </a>
-        <h5 id="companyName">My company</h5>
-        <a href="../cart.html">
-          <div id="cart">
+      <div id="menu">
+        <div id="menu-item-1">
+          <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
+          <div id="dropdown" style="display: none">
+            <a href="../index.html">Home</a>
+            <a href="../login.html">Logout</a>
+          </div>
+        </div>
+        <div id="menu-item-2">
+          <a id="cart" href="../cart.html">
             <div id="cartCount">0</div>
             <img id="cartIcon" src="../images/cart.png" />
-          </div>
-        </a>
+          </a>
+        </div>
       </div>
-      <div id="content">
-        <img id="product-image" src="../images/ultimatexperience.webp" />
-        <h1>The Ultimate Experience Gaming Chair</h1>
-        <p>
-          Beat The Game With the Ultimate Gaming Chair<br />
-          Experience the Ultimate Comfort Peak Performace
-        </p>
-        <button onclick="addToCart()">Add to Cart</button>
-      </div>
-      <script>
-        let cart = 0;
+    </div>
 
-        function addToCart() {
-          if (cart == 10) {
-            return;
-          }
-          cart = cart + 2;
-          document.getElementById("cartCount").innerText = cart;
-        }
-        
-         function toggleMenu() {
+    <div id="content">
+      <img id="product-image" src="../images/ultimatexperience.webp" />
+      <h3>The Ultimate Experience Gaming Chair</h3>
+      <div class="price">$199</div>
+      <p>Beat The Game With the Ultimate Gaming ChairExperience the Ultimate Comfort Peak Performance</p>
+      <button onclick="addToCart()">Add to Cart</button>
+    </div>
+
+    <footer>© 2026 My Shop</footer>
+
+    <script>
+      let cart = 0;
+
+      function addToCart() {
+        cart++;
+        document.getElementById("cartCount").innerText = cart;
+      }
+
+      function toggleMenu() {
         const dropdown = document.getElementById("dropdown");
         const menuBtn = document.getElementById("menu-btn");
 
@@ -48,7 +60,6 @@
           menuBtn.innerHTML = ">Menu ▴";
         }
       }
-      </script>
-    </body>
-  </head>
+    </script>
+  </body>
 </html>
