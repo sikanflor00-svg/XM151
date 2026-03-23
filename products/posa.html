@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,13 +30,7 @@
       </div>
     </div>
 
-    <div id="content">
-      <img id="product-image" src="../images/posa.jpg" />
-      <h3>Posa</h3>
-      <div class="price">$0.00</div>
-      <p>A Rong Rong Time Ago.</p>
-      <button onclick="addToCart()">Add to Cart</button>
-    </div>
+    <div id="content"></div>
 
     <footer>© 2026 My Shop</footer>
 
@@ -60,6 +54,29 @@
           menuBtn.innerHTML = "Menu ▴";
         }
       }
+
+      function renderProduct() {
+        const product = {
+          id: 1,
+          name: "Posa",
+          price: 49,
+          image: "../images/posa.jpg",
+          description: "A Rong Rong Time Ago.",
+        };
+
+        const productElement = document.createElement("div");
+
+        productElement.innerHTML = `
+          <img id="product-image" src="${product.image}" />
+          <h3>${product.name}</h3>
+          <div class="price">$${product.price.toFixed(2)}</div>
+          <p>${product.description}</p>
+          <button onclick="addToCart()">Add to Cart</button>
+        `;
+        document.getElementById("content").appendChild(productElement);
+      }
+
+      renderProduct();
     </script>
   </body>
 </html>

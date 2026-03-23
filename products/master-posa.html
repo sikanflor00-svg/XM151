@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
     <title>Niggie Delight</title>
@@ -6,28 +6,28 @@
 
     <body>
       <div id="header">
-      <a href="index.html">
-        <img id="SKYNET" src="../images/SKYNET.gif" />
-      </a>
-      <h5>SKYNET</h5>
+        <a href="index.html">
+          <img id="SKYNET" src="../images/SKYNET.gif" />
+        </a>
+        <h5>SKYNET</h5>
 
-      <div id="menu">
-        <!-- TODO: Copy to other pages' header -->
-        <div id="menu-item-1">
-          <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
-          <div id="dropdown" style="display: none">
-            <a href="../index.html">Home</a>
-            <a href="../login.htmlgit ">Logout</a>
+        <div id="menu">
+          <!-- TODO: Copy to other pages' header -->
+          <div id="menu-item-1">
+            <button id="menu-btn" onclick="toggleMenu()">Menu ▾</button>
+            <div id="dropdown" style="display: none">
+              <a href="../index.html">Home</a>
+              <a href="../login.htmlgit ">Logout</a>
+            </div>
+          </div>
+          <div id="menu-item-2">
+            <a id="cart" href="../cart.html">
+              <div id="cartCount">0</div>
+              <img id="cartIcon" src="../images/cart.png" />
+            </a>
           </div>
         </div>
-        <div id="menu-item-2">
-          <a id="cart" href="../cart.html">
-            <div id="cartCount">0</div>
-            <img id="cartIcon" src="../images/cart.png" />
-          </a>
-        </div>
       </div>
-    </div>
       <div id="content">
         <video
           id="product-video"
@@ -52,18 +52,18 @@
           document.getElementById("cartCount").innerText = cart;
         }
 
-         function toggleMenu() {
-        const dropdown = document.getElementById("dropdown");
-        const menuBtn = document.getElementById("menu-btn");
+        function toggleMenu() {
+          const dropdown = document.getElementById("dropdown");
+          const menuBtn = document.getElementById("menu-btn");
 
-        if (dropdown.style.display === "block") {
-          dropdown.style.display = "none";
-          menuBtn.innerHTML = "Menu ▾";
-        } else {
-          dropdown.style.display = "block";
-          menuBtn.innerHTML = "Menu ▴";
+          if (dropdown.style.display === "block") {
+            dropdown.style.display = "none";
+            menuBtn.innerHTML = "Menu ▾";
+          } else {
+            dropdown.style.display = "block";
+            menuBtn.innerHTML = "Menu ▴";
+          }
         }
-      }
       </script>
     </body>
   </head>
